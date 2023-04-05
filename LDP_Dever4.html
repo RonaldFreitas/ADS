@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Restaurante Ratatouille</title>
+        <style>
+
+        </style>
+    </head>
+
+    <body>
+        <form>
+            <h1>Restaurate Ratatouille</h1>
+            <h2>R$60/kg</h2>
+            <label>Quantos kg deu seu prato?</label><br>
+            <input type="text" id="PesoPrato" required><br><br>
+            <input type="submit" value="Calcular Preço">
+            <h2 id="PesoGramas"></h2>
+            <h2 id="Preco"></h2>
+        </form>
+    </body>
+    <script>
+        const frm = document.querySelector("form");
+        const PesoDoPrato = document.querySelector("#PesoGramas");
+        const PrecoPrato = document.querySelector("#Preco");
+        
+        frm.addEventListener ('submit', (e) =>{
+            const numPesoK = Number(frm.PesoPrato.value);
+            const numPesoG = numPesoK * 1000;
+            PesoDoPrato.innerText = `Peso em grama: ${numPesoG}g`;
+            const PrecoFinal = numPesoK * 60;
+            PrecoPrato.innerText = `Preço: R$${PrecoFinal}`;
+            e.preventDefault();
+        })
+    </script>
+</html>
