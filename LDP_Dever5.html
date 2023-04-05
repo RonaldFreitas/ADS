@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chá revelação</title>
+    </head>
+
+    <body>
+        <form>
+            <h1>Chá revelação</h1>
+            <p>Sexos:
+            <input type="radio" id="InMenino">Menino
+            <input type="radio" id="InMenina">Menina 
+            <input type="reset" value="Limpar Campos"></p>
+            <input type="submit" value="Revelar"><br><br>
+            <h1 id="TextoGenero"></h1>
+            <p id="GeneroRevelacao"></p>
+        </form>
+    </body>
+    <script>
+        const frm = document.querySelector("form");
+        const Genero = document.querySelector("#GeneroRevelacao");
+        const Texto = document.querySelector("#TextoGenero");
+        const corpo = document.querySelector("body")
+
+        frm.addEventListener ('submit', (e) => {
+            e.preventDefault();
+            Texto.innerText = `Parabéns:`;
+            const BolMenino = frm.InMenino.checked;
+            if(BolMenino){
+                Genero.innerText = `É menino`;
+                Genero.style.color = "Blue";
+                corpo.style.backgroundColor = "LightBlue";
+            } else{
+                Genero.innerText = `É menina`;
+                Genero.style.color = "DeepPink";
+                corpo.style.backgroundColor = "Pink";
+            }
+        })
+
+    </script>
+</html>
