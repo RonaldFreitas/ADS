@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fuso Horário</title>
+    </head>
+
+    <body>
+        <form>
+            <h1>Fuso Horário</h1>
+            <p>Capital:
+            <input type="text" id="inCidade" required><br>
+            Horas:
+            <input type="number" id="inHoras" min="0" max="24" step="1" required><br></p>
+            <input type="submit" value="CalcularFusoHorario"><br><br>
+            <h1 id="NomeCidade"></h1>
+            <h1 id="FusoFinal"></h1>
+        </form>
+    </body>
+    <script>
+        const frm = document.querySelector("form");
+        const FusoHorarioFinal = document.querySelector("#FusoFinal");
+        const NomeDaCidade = document.querySelector("#NomeCidade")
+        var Capital = document.querySelector("inCidade")
+        var Horas = document.querySelector("inHoras")
+
+        frm.addEventListener ('submit', (e) => {
+            e.preventDefault();
+            const strCity = frm.Capital.value;
+            const numHoras = Number(frm.Horas.value);
+            let fusoHorario;
+            let horario;
+
+            switch (City) {
+                case "Rio Branco":
+                    fusoHorario = "UTC-5";
+                    break;
+                case "Maceió":
+                case "Macapá":
+                    fusoHorario = "UTC-3";
+                    horario = 3;
+                    break;
+                case "Manaus":
+                    fusoHorario = "UTC-4";
+                    horario = 4;
+                    break;
+                case "Salvador":
+                case "Fortaleza":
+                case "Brasília":
+                case "Vitória":
+                case "Goiânia":
+                case "São Luís":
+                case "Belo Horizonte":
+                case "Belém":
+                case "João Pessoa":
+                case "Curitiba":
+                case "Recife":
+                case "Teresina":
+                case "Rio de Janeiro":
+                case "Natal":
+                case "Porto Alegre":
+                case "Florianópolis":
+                case "São Paulo":
+                case "Aracaju":
+                case "Palmas":
+                    fusoHorario = "UTC-3";
+                    horario = 3;
+                    break;
+                default:
+                    fusoHorario = null
+                    break;
+            }
+            if(fusoHorario) {
+                `Fuso horário de: ${city} é ${fusoHorario} e lá são ${numHoras - horario} horas`
+            } else {
+                `Fuso horário não encontrado`
+            }
+        })
+
+    </script>
+</html>
