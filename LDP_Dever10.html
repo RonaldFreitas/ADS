@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nota</title>
+    </head>
+
+    <body>
+        <form>
+            <h1>Nota:</h1>
+            <p>Sua nota:
+            <input type="number" id="inNota"></p>
+            <input type="submit" value="Resultado"><br><br>
+            <h1 id="nota"></h1>
+        </form>
+    </body>
+    <script>
+        const frm = document.querySelector("form");
+        const strNota = document.querySelector("#nota");
+
+        frm.addEventListener ('submit', (e) => {
+            e.preventDefault();
+            const numNota = Number(frm.inNota.value);
+            if(numNota >= 5){
+                strNota.innerText = `Passou`;
+                strNota.style.color = "Blue";
+            } else{} if(numNota >= 2 && numNota < 5){
+                strNota.innerText = `Recuperação`;
+                strNota.style.color = "Black";
+            } else{} if(numNota < 2){
+                strNota.innerText = `Reprovado`;
+                strNota.style.color = "Red";
+            } else{}
+        })
+
+    </script>
+</html>

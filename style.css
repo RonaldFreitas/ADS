@@ -1,0 +1,19 @@
+.estiloTexto {
+    color: aqua;
+    text-decoration: none;
+}
+
+.home {
+    color: rgb(199, 0, 199);
+    text-decoration: none;
+}
+
+.curriculo {
+    color: rgb(0, 255, 128);
+    text-decoration: none;
+}
+
+.rotina {
+    color: deeppink;
+    text-decoration: none;
+}

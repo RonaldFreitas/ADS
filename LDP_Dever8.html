@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Média</title>
+    </head>
+
+    <body>
+        <form>
+            <h1>Números</h1>
+            <p>Primeiro número:
+            <input type="number" id="inPrimeiro"><br>
+            Segundo número:
+            <input type="number" id="inSegundo"><br>
+            Terceiro número:
+            <input type="number" id="inTerceiro"><br></p>
+            <input type="submit" value="Calcular"><br><br>
+            <h2 id="numUm"></h2>
+            <h2 id="numDois"></h2>
+            <h2 id="numTres"></h2>
+            <h2 id="numFinal"></h2>
+        </form>
+    </body>
+    <script>
+        const frm = document.querySelector("form");
+        const numPrimeiro = document.querySelector("#numUm");
+        const numSegundo = document.querySelector("#numDois");
+        const numTerceiro = document.querySelector("#numTres");
+        const numCalculo = document.querySelector("#numFinal");
+
+
+        frm.addEventListener ('submit', (e) => {
+            e.preventDefault();
+            const numFirst = Number(frm.inPrimeiro.value);
+            const numSecond = Number(frm.inSegundo.value);
+            const numThird = Number(frm.inTerceiro.value);
+            const numMedia = (numFirst + numSecond + numThird) / 3;
+            numPrimeiro.innerText = `O primeiro número é ${numFirst}`;
+            numSegundo.innerText = `O primeiro número é ${numSecond}`;
+            numTerceiro.innerText = `O primeiro número é ${numThird}`;
+            numCalculo.innerText = `O resultado da média é: ${numMedia}`
+        })
+
+    </script>
+</html>

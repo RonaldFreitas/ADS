@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Soma e multiplicação</title>
+    </head>
+
+    <body>
+        <form>
+            <h4>Calculo de 2 + 3 x 5</h4>
+            <input type="submit" value="Calcular">
+            <h2 id="idResultado"></h2>
+        </form>
+    </body>
+    <script>
+        const frm = document.querySelector("form");
+        const resultado = document.querySelector("#idResultado");
+        
+        frm.addEventListener ('submit', (e) =>{
+            e.preventDefault()
+            const numUm = 2;
+            const numDois = 3;
+            const numTres = 5;
+            const numCalculo = (numUm + numDois)* numTres;
+            resultado.innerText = `O resultado é ${numCalculo}`;
+        })
+    </script>
+</html>

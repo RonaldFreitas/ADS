@@ -23,28 +23,27 @@
         const frm = document.querySelector("form");
         const FusoHorarioFinal = document.querySelector("#FusoFinal");
         const NomeDaCidade = document.querySelector("#NomeCidade")
-        var Capital = document.querySelector("inCidade")
-        var Horas = document.querySelector("inHoras")
 
         frm.addEventListener ('submit', (e) => {
             e.preventDefault();
-            const strCity = frm.Capital.value;
-            const numHoras = Number(frm.Horas.value);
-            let fusoHorario;
-            let horario;
+            const strCity = frm.inCidade.value;
+            const numHoras = Number(frm.inHoras.value);
+            var fusoHorario;
+            var horario;
 
-            switch (City) {
+            switch (strCity) {
                 case "Rio Branco":
-                    fusoHorario = "UTC-5";
+                    var fusoHorario = "UTC-5";
+                    var horario = 2;
                     break;
                 case "Maceió":
                 case "Macapá":
-                    fusoHorario = "UTC-3";
-                    horario = 3;
+                    var fusoHorario = "UTC-3";
+                    var horario = 0;
                     break;
                 case "Manaus":
-                    fusoHorario = "UTC-4";
-                    horario = 4;
+                    var fusoHorario = "UTC-4";
+                    var horario = 1;
                     break;
                 case "Salvador":
                 case "Fortaleza":
@@ -65,17 +64,18 @@
                 case "São Paulo":
                 case "Aracaju":
                 case "Palmas":
-                    fusoHorario = "UTC-3";
-                    horario = 3;
+                    var fusoHorario = "UTC-3";
+                    var horario = 0;
                     break;
                 default:
-                    fusoHorario = null
+                    var fusoHorario = null;
+                    var horario = null;
                     break;
             }
             if(fusoHorario) {
-                `Fuso horário de: ${city} é ${fusoHorario} e lá são ${numHoras - horario} horas`
-            } else {
-                `Fuso horário não encontrado`
+                NomeDaCidade.innerText = `Fuso horário de: ${strCity} é ${fusoHorario} e lá são: ${numHoras - horario} horas.`
+            } else {  
+                NomeDaCidade.innerText = `Fuso horário não encontrado.`              
             }
         })
 
