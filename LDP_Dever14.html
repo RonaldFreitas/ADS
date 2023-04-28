@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Passou?</title>
+    </head>
+
+    <body>
+        <form>
+            <p>
+            Média aluno 1: <br>
+            <input type="number" step="0.01" id="inMedia1"><br>
+            Média aluno 2: <br>
+            <input type="number" step="0.01" id="inMedia2"><br>
+            Média aluno 3: <br>
+            <input type="number" step="0.01" id="inMedia3"><br>
+            Média: <br>
+            <input type="number" step="0.01" id="inMedia0"><br>
+            </p>
+            <input type="submit" value="Calcular">
+        </form>
+    </body>
+    <script>
+        const frm = document.querySelector("form")
+
+        frm.addEventListener ('submit', (e) => {
+            e.preventDefault();
+            const media1 = Number(frm.inMedia1.value);
+            const media2 = Number(frm.inMedia2.value);
+            const media3 = Number(frm.inMedia3.value);
+            const media0 = Number(frm.inMedia0.value);
+            
+            if(media1 >= media0) {
+                console.log("Aluno aprovado, nota:" + media1);
+            } else{
+                console.log("Aluno reprovado, nota:" + media1);
+            }
+            if (media2 >= media0) {
+                console.log("Aluno aprovado, nota:" + media2);
+            } else{
+                console.log("Aluno reprovado, nota:" + media2);
+            }
+            if (media3 >= media0) {
+                console.log("Aluno aprovado, nota:" + media3);
+            } else{
+                console.log("Aluno reprovado, nota:" + media3);
+            }
+            
+       })
+    </script>
+</html>
