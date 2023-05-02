@@ -4,33 +4,22 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Passou?</title>
+        <title>Troca de valores</title>
     </head>
 
     <body>
-        <form>
-            <p>
-            Média aluno 1: <br>
-            <input type="number" step="0.01" id="inMedia1"><br>
-            Média aluno 2: <br>
-            <input type="number" step="0.01" id="inMedia2"><br>
-            Média aluno 3: <br>
-            <input type="number" step="0.01" id="inMedia3"><br>
-            Média: <br>
-            <input type="number" step="0.01" id="inMedia0"><br>
-            </p>
-            <input type="submit" value="Calcular">
-        </form>
     </body>
     <script>
-        const frm = document.querySelector("form")
+        var numUm = prompt("Digite o primeiro número:")
+        var numDois = prompt("Digite o segundo número:")
 
-        frm.addEventListener ('submit', (e) => {
-            e.preventDefault();
-            const media1 = Number(frm.inMedia1.value);
-            const media2 = Number(frm.inMedia2.value);
-            const media3 = Number(frm.inMedia3.value);
-            const media0 = Number(frm.inMedia0.value);            
-       })
+        function troca(numOne, numTwo) {
+            console.log(numOne, numTwo)
+            var numTemporario = numOne
+            var numOne = numDois
+            var numTwo = numTemporario
+            console.log(numOne, numTwo)
+        }
+        troca(numUm, numDois)
     </script>
 </html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Menor deles</title>
+    </head>
+
+    <body>
+    </body>
+    <script>
+        var numUm = Number(prompt("Digite o primeiro número:"))
+        var numDois = Number(prompt("Digite o segundo número:"))
+        var numTres = Number(prompt("Digite o terceiro número:"))
+        var numTodos = []
+        numTodos.unshift(numUm, numDois, numTres)
+
+        function exibir(numAll) {
+            console.log(numAll)
+            if (numAll[0] < numAll[1] && numAll[0] < numAll[2]) {
+                console.log("O menor deles é o: " + numAll[0])
+            } else {} if (numAll[1] < numAll[0] && numAll[1] < numAll[2]) {
+                console.log("O menor deles é o: " + numAll[1])
+            } else {} if (numAll[2] < numAll[0] && numAll[2] < numAll[1]) {
+                console.log("O menor deles é o: " + numAll[2])
+            } else {}
+        }
+        exibir(numTodos)
+
+    </script>
+</html>
