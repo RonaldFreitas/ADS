@@ -8,11 +8,17 @@
     </head>
 
     <body>
+        <form>
+            <p>Ano de nascimento:
+            <input type="number" id="inNascimento"></p><br>
+            <input type="submit" value="Calcular">
+            <script>
+                var ano = document.getElementById("inNascimento")
+                function idade (anoNascimento) {
+                return 2023 - anoNascimento
+                }
+                console.log(anoNascimento)
+            </script>
+        </form>
     </body>
-    <script>
-        function idade (anoNascimento) {
-        return 2023 - anoNascimento
-        }
-        console.log(idade)
-    </script>
 </html>
