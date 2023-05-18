@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inversão</title>
+    </head>
+
+    <body>
+    </body>
+    <script>
+        var numUm = Number(prompt("Primeiro número:"))
+        var numDois = Number(prompt("Segundo número:"))
+        var numTres = Number(prompt("Terceiro número:"))
+        var numQuatro = Number(prompt("Quarto número:"))
+        var numCinco = Number(prompt("Quinto número:"))
+        var numTodos = []
+        numTodos.unshift(numUm, numDois, numTres, numQuatro, numCinco)
+
+        for (let i = 0; i < 5; i++) {
+            numTodos[i];
+        }
+        console.log(numTodos[4])
+        console.log(numTodos[3])
+        console.log(numTodos[2])
+        console.log(numTodos[1])
+        console.log(numTodos[0])
+
+    </script>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Idade</title>
+    </head>
+
+    <body>
+    </body>
+    <script>
+        var numUm = Number(prompt("Primeiro ano de nascimento:"))
+        var numDois = Number(prompt("Segundo ano de nascimento:"))
+        var numTres = Number(prompt("Terceiro ano de nascimento:"))
+        var numQuatro = Number(prompt("Quarto ano de nascimento:"))
+        var numCinco = Number(prompt("Quinto ano de nascimento:"))
+        var numSeis = Number(prompt("Sexto ano de nascimento:"))
+        var numSete = Number(prompt("Sétimo ano de nascimento:"))
+        var numOito = Number(prompt("Oitavo ano de nascimento:"))
+        var numNove = Number(prompt("Nono ano de nascimento:"))
+        var numDez = Number(prompt("Décimo ano de nascimento:"))
+        var numTodos = []
+        numTodos.unshift(numUm, numDois, numTres, numQuatro, numCinco, numSeis, numSete,numOito, numNove, numDez)
+        function idade(numAll) {
+            var idade1 = 2023 - numAll[0]
+            var idade2 = 2023 - numAll[1]
+            var idade3 = 2023 - numAll[2]
+            var idade4 = 2023 - numAll[3]
+            var idade5 = 2023 - numAll[4]
+            var idade6 = 2023 - numAll[5]
+            var idade7 = 2023 - numAll[6]
+            var idade8 = 2023 - numAll[7]
+            var idade9 = 2023 - numAll[8]
+            var idade10 = 2023 - numAll[9]
+            var numAllMod = []
+            numAllMod.push(idade1, idade2, idade3, idade4, idade5, idade6, idade7, idade8, idade9, idade10)
+            for (let i = 0; i < 10; i++) {
+            console.log(numAll + ":" + numAllMod)            
+        }
+        }
+
+        idade(numTodos)
+
+    </script>
+</html>
